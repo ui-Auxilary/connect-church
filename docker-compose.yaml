@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  frontend:
+    build: ./frontend
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    container_name: frontend_c
+    ports:
+      - '5173:5173'
+    volumes: 
+      - ./frontend/src:/client/src 
+      - /client/node_modules
+    stdin_open: true
+    tty: true
