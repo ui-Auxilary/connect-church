@@ -9,6 +9,5 @@ services:
       - '5173:5173'
     volumes: 
       - ./frontend/src:/client/src 
-      - /client/node_modules
     stdin_open: true
     tty: true
